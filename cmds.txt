@@ -1,0 +1,584 @@
+    1  apt-get update
+    2  apt-get remove docker docker-engine docker.io
+    3  apt install docker.io
+    4  systemctl start docker
+    5  systemctl enable docker
+    6  docket --version
+    7  docker --version
+    8  docker logout
+    9  docker login
+   10  history
+   11  docker pull nginx
+   12  docker pull images
+   13  docker images
+   14  docker ps
+   15  docker ps -a
+   16  docker run  nginx
+   17  docker run  -dt nginx
+   18  docker ps
+   19  docker ps -a
+   20  docker run -dt --name mynginx nginx
+   21  docker ps -a
+   22  netstat -ntpl
+   23  apt-get 
+   24  netstat -ntpl
+   25  docker ps -a
+   26  docker container run -dt 8080:80 --name mynginx nginx
+   27  docker container run -dt -p 8080:80 --name mynginx nginx
+   28  docker container run -dt -p 8080:80 --name mynginx2 nginx
+   29  netstat -ntpl
+   30  docker container run -dt -P --name mynginx3 nginx
+   31  netstat -ntpl
+   32  docker ps -a
+   33  docker container stop mynginx2
+   34  docker container stop mynginx
+   35  docker ps -a
+   36  docker container start mynginx
+   37  docker ps -a
+   38  docker ps 
+   39  docker ps -a
+   40  docker container rm elastic_kirch
+   41  docker ps -a
+   42  docker container rm focused*
+   43  docker container rm focused_gates
+   44  docker ps -a
+   45  docker ls -qa
+   46  docker ps -qa
+   47  docker container stop $(docker ps -qa)
+   48  docker container start $(docker ps -qa)
+   49  docker container exec -it mynginx3 bash
+   50  docker ps -a
+   51  docker pull busybox
+   52  docker pull ubuntu
+   53  docker images
+   54  docker container stop $(docker ps -qa)
+   55  docker container rm $(docker ps -qa)
+   56  docker ps -a
+   57  history
+   58  docker container run -dt -p 8080:80 --name myubantu ubantu
+   59  docket image
+   60  docket images
+   61  docker images
+   62  docker container start -dt -p 8080:80 --name myubantu ubantu
+   63  docker container run -dt -p 8080:80 --name myubantu ubantu
+   64  docker pull ubantu
+   65  docket login
+   66  docker login
+   67  docker container run -dt -p 8080:80 --name myubantu ubantu
+   68  docker logout
+   69  docker login
+   70  docker container run -dt -p 8080:80 --name myubantu ubantu
+   71  docker ps -a
+   72  docker pull ubantu
+   73  exit
+   74  history
+   75  docker container run -dt -p 8080:80 --name myubuntu ubuntu
+   76  history | grep bash
+   77  docker container exec -it myubuntu bash
+   78  docker ps -a
+   79  docker images
+   80  docker container run -dt -p 8081:80 --name mynginx2 nginx "sleep 30"
+   81  docker container run -dt -p 8081:80 --name mynginx3 nginx sleep 30
+   82  docket ps -a
+   83  docker ps -a
+   84  docker system df
+   85  docker system df -v
+   86  docker container exec -it myubuntu bash
+   87  docker system df -v
+   88  docker logs myubuntu
+   89  docker logs mynginx3
+   90  docker logs mynginx2
+   91  docker container run -dt --name mybusybox busybox ping -c 20 google.com
+   92  docker logs mybusybox
+   93  docker ps -1
+   94  docker ps -a
+   95  docker ps 
+   96  systemctl stop docker
+   97  docker ps 
+   98  systemctl status docker
+   99  systemctl start docker
+  100  docker ps 
+  101  docker ps -a
+  102  docker stop mynginx2
+  103  docker ps -a
+  104  docker rm mynginx2
+  105  docker ps -a
+  106  docker container run -dt --name mybusybox2 busybox --restart
+  107  docker ps -a
+  108  docker rm mybusybox2
+  109  docker ps -a
+  110  docker container run -dt --name mybusybox2 --restart busybox 
+  111  docker container run -dt --name mybusybox3 --restart busybox 
+  112  docker ps -a
+  113  docker container run -dt --name mybusybox3 --restart ALWAYS busybox 
+  114  docker ps -a
+  115  docker container run -dt --name mybusybox3 --restart always  busybox 
+  116  systemctl stop docker
+  117  systemctl start docker
+  118  docker ps -a
+  119  history
+  120  docker container exec -it myubuntu bash
+  121  docker container start myubuntu
+  122  docker container exec -it myubuntu bash
+  123  docker ps -a
+  124  docker container commit fca16c683977 myImage:v1
+  125  docker container commit fca16c683977 myimage:v1
+  126  docker images
+  127  docker container run -dt --name mynewubuntu myimage
+  128  docker container run -dt --name mynewubuntu myimage:v1
+  129  docker container exec -it mynewubuntu bash
+  130  docker container run -dt --rm --name mynginx nginx sleep 20
+  131  docker ps -a
+  132  docker ps
+  133  docker container inspect ubuntu 
+  134  docker container inspect myubuntu
+  135  docker image history nginx
+  136  docker image inspect nginx
+  137  pwd
+  138  mdkir workingDir
+  139  mkdir workingDir
+  140  cd workingDir/
+  141  ls -lrt
+  142  touch dockerfile
+  143  ls -lrt
+  144  vi dockerfile 
+  145  rm dockerfile 
+  146  vi dockerfile 
+  147  cat > index.html
+  148  vi dockerfile 
+  149  docker build -t dockerfile
+  150  docker build dockerfile
+  151  cat dockerfile 
+  152  cat index.html 
+  153  docker image build .
+  154  vi dockerfile 
+  155  docker image build .
+  156  pwd
+  157  vi dockerfile 
+  158  docker image build .
+  159  vi dockerfile 
+  160  docker image build .
+  161  cd ..
+  162  docker ps -a
+  163  history
+  164  cd workingDir/
+  165  docker image build .
+  166  cd ..
+  167  docker ps
+  168  history
+  169  docker container exec -it mynewubuntu bash
+  170  cd workingDir/
+  171  vi dockerfile 
+  172  docker image build .
+  173  vi dockerfile 
+  174  docker image build .
+  175  docker images
+  176  docker container run -dt --name myngx 2aab109967c7
+  177  docker ps
+  178  cat dockerfile 
+  179  docker container run -dt -p8080:80 --name myngx 2aab109967c7
+  180  docker container run -dt -p8080:80 --name myngx1 2aab109967c7
+  181  docker container run -dt -p8081:80 --name myngx1 2aab109967c7
+  182  docker container run -dt -p8081:80 --name myng2 2aab109967c7
+  183  cat index.html 
+  184  history
+  185  docker container stop $(docker ps -qa)
+  186  docker container rm $(docker ps -qa)
+  187  docker ps -qa
+  188  docker images
+  189  docker imaages rm $(docker ps -qa)
+  190  docker images rm $(docker ps -qa)
+  191  docker images
+  192  docker images --rm $(docker ps -qa)
+  193  cd  
+  194  cd /var/lib/docker
+  195  ls
+  196  cd image
+  197  ls
+  198  docker rmi $(docker ps -qa)
+  199  docker rmi $(docker images -qa)
+  200  ls
+  201  cd overlay2/
+  202  ls
+  203  cd ..
+  204  docker images
+  205  history
+  206  pwd
+  207  cd ..
+  208  ls
+  209  cd overlay2/
+  210  ls
+  211  cd l
+  212  ls
+  213  cd ..
+  214  ls -lrt
+  215  docker pull ubuntu
+  216  docker images
+  217  ls
+  218  ls -lrt
+  219  docker inspect ubuntu
+  220  docker volume ls
+  221  docker ps
+  222  docker ps -qa
+  223  docker ps -a
+  224  cd
+  225  docker images
+  226  docker container run -dt --nam myubuntu ubantu
+  227  docker container run -dt --name myubuntu ubantu
+  228  docker container run -dt --name myubuntu ubuntu
+  229  docker container inpect myununtu
+  230  docker container inspect myununtu
+  231  docker container inspect myubuntu
+  232  tail /var/lib/docker/containers/5d4972238f5a66310969b61b98e4e9e9cf7f868fed1f0011c98879891c023eef/5d4972238f5a66310969b61b98e4e9e9cf7f868fed1f0011c98879891c023eef-json.log
+  233  docker container exec -it myubuntu bash
+  234  tail /var/lib/docker/containers/5d4972238f5a66310969b61b98e4e9e9cf7f868fed1f0011c98879891c023eef/5d4972238f5a66310969b61b98e4e9e9cf7f868fed1f0011c98879891c023eef-json.log
+  235  docker container stop myubuntu 
+  236  docker ps -a
+  237  tail /var/lib/docker/containers/5d4972238f5a66310969b61b98e4e9e9cf7f868fed1f0011c98879891c023eef/5d4972238f5a66310969b61b98e4e9e9cf7f868fed1f0011c98879891c023eef-json.log
+  238  docker volume create myvolume
+  239  docker volume ls
+  240  cd /var/lib/docker
+  241  ls 
+  242  cd volumes/
+  243  ls
+  244  cd myvolume/
+  245  ls -lrt
+  246  cd 
+  247  docker container run -dt --name myubuntu2 --volume myvolume:/etc -p8080:80 ubuntu 
+  248  docker container exec -it myubuntu2 bash
+  249  cd /var/lib/docker/volumes/myvolume
+  250  ls
+  251  cd _data
+  252  ls
+  253  ls -lrt
+  254  docker container stop myubuntu2 
+  255  ls -lrt my*
+  256  docker container rm myubuntu2 
+  257  ls -lrt my*
+  258  history
+  259  ls
+  260  ls -lrt
+  261  cd ..
+  262  cd 
+  263  docker volume rm myvolume
+  264  docker volume ls
+  265  docker volume create vol1
+  266  cd workingDir/
+  267  ls -lrt
+  268  vi dockerfile 
+  269  ls -lrt
+  270  docker images
+  271  docker build image .
+  272  docker image build .
+  273  docker ps
+  274  history
+  275  docker images
+  276  docker container run -dt -p8080:80 --name myngx 9e8b67ff9318
+  277  docker container run -dt -p8081:80 --name myngx2 9e8b67ff9318
+  278  docker inspect myngx2
+  279  cd /var/lib/docker/overlay2/..
+  280  ls
+  281  cd volumes/
+  282  ls
+  283  cd vol1/
+  284  ls
+  285  cd _data
+  286  ls
+  287  ls -lrt
+  288  ls
+  289  cd ..
+  290  ls
+  291  cd 
+  292  cd workingDir/
+  293  ls
+  294  vi dockerfile 
+  295  cat dockerfile 
+  296  docker image build .
+  297  docker images
+  298  history
+  299  docker container run -dt -p8081:80 --name myngx2 --volume vol1: nginx
+  300  docker images
+  301  docker container run -dt -p8081:80 --name myngx3 --volume vol1: 561ce3762cd5
+  302  docker volume ls
+  303  docker container run -dt -p8081:80 --name myngx3 --volume vol1: 561ce3762cd5
+  304  docker container run -dt -p8081:80 --name myngx3 --volume vol1 561ce3762cd5
+  305  docker container run -dt -p8082:80 --name myngx3 --volume vol1 561ce3762cd5
+  306  docker container run -dt -p8082:80 --name myngx4 --volume vol1 561ce3762cd5
+  307  docker inspect myngx4
+  308  cd /var/lib/docker/
+  309  ls
+  310  cd volumes/vol1/_data/
+  311  ls
+  312  ls -lrt
+  313  cd 
+  314  cd workingDir/
+  315  cat dockerfile 
+  316  docker images
+  317  docker inspect images 561ce3762cd5
+  318  docker inspect myngx3
+  319  docker container run -dt -p8082:80 --name myngx4 --volume vol1: 561ce3762cd5
+  320  docker inspect myngx4
+  321  docker container run -dt -p8085:80 --name myngx5 --volume vol1: 561ce3762cd5
+  322  docker container run -dt -p8085:80 --name myngx5 --volume :vol1 561ce3762cd5
+  323  docker inspect myngx5
+  324  cd volumes/vol1/
+  325  cd /var/lib/docker/
+  326  cd volumes/vol1/
+  327  ls
+  328  cd _data/
+  329  ls
+  330  ls -lrt
+  331  cd ..
+  332  ls
+  333  ls -lrt
+  334  cd vol1/
+  335  ls
+  336  cd _date
+  337  history
+  338  docker container exec -it  myngx5 bash
+  339  history
+  340  docker container stop $(docker ps -qa)
+  341  docker container rm $(docker ps -qa)
+  342* 
+  343  cd workingDir/
+  344  cat dockerfile 
+  345  docker container run -dt -p8080:80 --name myngx --volume vol1:/var/log/nginx 561ce3762cd5
+  346  docker container run -dt -p8081:80 --name myngx1 --volume-from myngx 561ce3762cd5
+  347  docker container run -dt -p8081:80 --name myngx1 --volume--from myngx 561ce3762cd5
+  348  docker container run -dt -p8081:80 --name myngx1 --volume -from myngx 561ce3762cd5
+  349  docker container ps
+  350  docker container ps -a
+  351  docker container run -dt -p8081:80 --name myngx1 --volume--from myngx 561ce3762cd5
+  352  docker container run --help | grep volume
+  353  docker container run -dt -p8081:80 --name myngx1 --volumes-from myngx 561ce3762cd5
+  354  docker inspect myngx1
+  355  /var/lib/docker
+  356  cd /var/lib/docker
+  357  cd volumes/vol1/
+  358  ls
+  359  cd _
+  360  cd _data/
+  361  ls
+  362  tail access.log 
+  363  ls -lrt
+  364  date
+  365  ls -lrt
+  366  rm access.log 
+  367  ls -lrt
+  368  touch access.log
+  369  ls
+  370  ls -lrt
+  371  cd
+  372  docker pull registry
+  373  docker images
+  374  docker container run -dt -p5000:5000 --name myregistry registry
+  375  docker ps 
+  376  docker images
+  377  docker tag 561ce3762cd5 localhost:5000/myimage
+  378  docker push localhost:5000/myimage
+  379  docker rmi image 561ce3762cd5
+  380  history
+  381  docker container stop $(docker ps -qa)
+  382  docker container rm $(docker ps -qa)
+  383  docker rmi image 561ce3762cd5
+  384  docker images
+  385  docker rmi $(docker images -qa)
+  386  docker images
+  387  docker pull localhost:5000/myimage
+  388  docker ps
+  389  docker pull registry
+  390  history
+  391  docker container run -dt -p5000:5000 --name myregistry registry
+  392  docker images
+  393  docker pull nginx
+  394  docker images
+  395  cd workingDir/
+  396  docker build image .
+  397  ls -lrt
+  398  docker image build .
+  399  docker images
+  400  history
+  401  docker ps
+  402  docker images
+  403  docker tag ca5a3a99641a localhost:5000/myimage
+  404  docker push localhost:5000/myimage
+  405  docker rmi ca5a3a99641a
+  406  docker pull localhost:5000/myimage
+  407  docker imags
+  408  docker images
+  409  docker tag ca5a3a99641a nginx:latest repo1/mynginx:latest
+  410  docker tag  nginx:latest repo1/mynginx:latest
+  411  docker images
+  412  docker push repo1/mynginx
+  413  docker push rajasego/repo1:mynginx
+  414  docker rmi repo1/mynginx
+  415  docker tag  nginx:latest rajasego/repo1:mynginx
+  416  docker images
+  417  docker push rajasego/repo1:latest
+  418  docker push rajasego/repo1:mynginx
+  419  which git
+  420  cd ..
+  421  mkdir repos
+  422  cd repos
+  423  git clone https://github.com/rajasego/my_repo.git
+  424  ls -lrt
+  425  cd my_repo
+  426  cat ../../workingDir/dockerfile 
+  427  cat > dockerfile
+  428  cat > start-script.sh
+  429  ls -lrt
+  430  docker build image -t lamp
+  431  docker build image  -t lamp .
+  432  docker build image .
+  433  docker image build . -t lamp
+  434  docker images
+  435  cat dockerfile 
+  436  cat > dockerfile
+  437  docker image build . -t lamp
+  438  docker images
+  439  docker container run -dt -p 8080:80 mylamp lamp
+  440  history
+  441  docker container run -dt -p 8080:80 --name mylamp lamp
+  442  docker ps
+  443  docker container exec -it mylamp bash
+  444  docker container exec -it lamp bash
+  445  docker ps
+  446  docker ps -a
+  447  docker log mylamp
+  448  docker logs mylamp
+  449  cat dockerfile 
+  450  cat start-script.sh 
+  451  cat /etc/apache2/apache2.conf
+  452  cat > wp-config.php
+  453  vi wp-config.php
+  454  cat wp-config.php 
+  455  ls -lrt
+  456  cd ..
+  457  git status
+  458  cd my_repo/
+  459  git status
+  460  git add -a 
+  461  git add -A
+  462  git status
+  463  git commit -m LAMP Docker
+  464  git commit -m LAMP_docker
+  465  git commit
+  466  git config --global user.email gkr.pillai@yahoo.com
+  467  git config --global user.name rajasego
+  468  git commit -m lamp_docker
+  469  git push
+  470  mv dockerfile DockerFile
+  471  git add -A
+  472  git sttaus
+  473  git status
+  474  git commit -a "second try"
+  475  git commit -m "second try"
+  476  git push
+  477  mv DockerFile Dockerfile
+  478  git commit -a 
+  479  git add -a
+  480  git add -ALL
+  481  git add -A
+  482  git commit -m "Try again"
+  483  git push
+  484  docker network ls
+  485  docker pull rajasego/repo1:latest
+  486  history
+  487  history | grep stop
+  488  docker container stop $(docker ps -qa)
+  489  history | grep rm
+  490  docker container rm $(docker ps -q
+
+)
+  491  docker container rm $(docker ps -qa)
+  492  docker rmi $(docker images -qa)
+  493  docker images
+  494  docker ps -a
+  495  docker images
+  496  docker rmi $(docker images)
+  497  docker images
+  498  docker pull nginx
+  499  history | grep nginx
+  500  docker container run -dt -p8080:80 --name mynginx nginx
+  501  docker inspect mynginx
+  502  docker container run -dt -p8082:80 --name mynginx2 nginx
+  503  docker inspect mynginx
+  504  docker inspect mynginx2
+  505  history | grep bash
+  506  docker container exec -it mynginx bash
+  507  docker network create --help
+  508  docker network create mynetwork
+  509  docker network inspect mynetwork
+  510  docker container run -dt -p8083:80 --name mynginx3 --network mynetwork nginx
+  511  docker container run -dt -p8084:80 --name mynginx4 --network mynetwork nginx
+  512  docker container exec -it mynginx4 bash
+  513  docker network --help
+  514  history | grep network
+  515  docker network create --help
+  516  docker network ls
+  517  history | grep myn[2~[2~[2~[2~[2~[2~[2~
+  518  docker network create mynetwork -d host
+  519  docker network create mynetwork2 -d host
+  520  ocker container run -dt -p8085:80 --name mynginx5 --network host nginx
+  521  docker container run -dt -p8085:80 --name mynginx5 --network host nginx
+  522  docker ps -a
+  523  history | grep stop
+  524  docker container stop $(docker ps -qa)
+  525  docker container rm $(docker ps -qa)
+  526  docker container run -dt -p8080:80 --name mynginx --network host nginx
+  527  docker network la
+  528  docker network ls
+  529  docker container run -dt -p8081:80 --name mynginx1 --network null nginx
+  530  docker container run -dt -p8081:80 --name mynginx1 --network none nginx
+  531  docker container run -dt -p8082:80 --name mynginx2 --network none nginx
+  532  docker container exec -it mynginx2 bash
+  533  docker network ls
+  534  docker container stop $(docker ps -qa)
+  535  docker container rm $(docker ps -qa)
+  536  docker images
+  537  docker ps -a
+  538  ifconfig
+  539  ifconfig | grep 192
+  540  docker swarm init --advertise-addr 192.168.3.187
+  541  docker node ls
+  542  docker network ls
+  543  docker service ls
+  544  history | grep run
+  545  docker service create --replicas 5 nginx
+  546  docker ps 
+  547  docker service ls
+  548  docker ps
+  549  docker service ps affectionate_kilby
+  550  docker service affectionate_kilby --scale 10
+  551  docker service affectionate_kilby scale 10
+  552  docker service scale affectionate_kilby=10
+  553  docker service ps affectionate_kilby
+  554  docker service scale affectionate_kilby=2
+  555* docker service ps 
+  556  docker service scale affectionate_kilby=3
+  557  docker service --help
+  558  docker service rm affectionate_kilby
+  559  docker service create --replicas 3 -p8080:80 nginx
+  560  docker service ls
+  561  docker service ps gallant_shannon
+  562  docker node update --availabilty drain swarm
+  563  docker node update --availability drain swarm
+  564  docker node update --availability drain rps-VirtualBox
+  565  docker node ls
+  566  docker node update --availability drain v8iqjgqh2n6k803yy1a38apau
+  567  docker node ls
+  568  docker node update --availability active v8iqjgqh2n6k803yy1a38apau
+  569  docker node ls
+  570  docker service ps gallant_shannon
+  571  docker ps
+  572  history | grep service
+  573  docker service rm gallant_shannon
+  574  docker service create --name antivirus --mode global -dt nginx
+  575  docker ps
+  576  docker node ls
+  577  docker node update --availability drain v8iqjgqh2n6k803yy1a38apau
+  578  docker node update --availability active v8iqjgqh2n6k803yy1a38apau
+  579  docker node ls
+  580  docker service ps antivirus
+  581  history
+  582  history > cmds.txt
